@@ -1,0 +1,305 @@
+@font-face {
+    font-family: "Alex Brush";
+    src: url('fonts/AlexBrush/AlexBrush-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Dancing Script Reg";
+    src: url('fonts/DancingScript/DancingScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Dancing Script Bold";
+    src: url('Fonts/DancingScript/DancingScript-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "SA Queen";
+    src: url('Fonts/JellykaSaint-AndrewsQueen/Saint-Andrews\ Queen.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Wonderland";
+    src: url('Fonts/JellykaWonderlandWine/JellykaWonderlandWine.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Jey";
+    src: url('Fonts/Jey/Jey.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Vegan";
+    src: url('Fonts/VeganStyle/VeganStylePersonalUse-5Y58.ttf') format('truetype');
+}
+
+:root {
+    --p1Blue: #8962E4;
+    --p1Purple: #8448AD;
+    --p1Yellow: #FFAF47;
+    --p1Orange: #FC6322;
+    --p1Pink: #EF2E78;
+
+    --p2Blue: #731DD8;
+    --p2Turq: #05A8AA;
+    --p2Orange: #F44708;
+    --p2Yellow: #FFAE03;
+    --p2Purple: #944BBB;
+
+    --p3Blue: #471CA8;
+    --p3Purple: #884AB2;
+    --p3Yellow: #FF930A;
+    --p3Orange: #F24B04;
+    --p3Pink: #D1105A;
+
+    --p4Pink: #EF476F;
+    --p4Yellow: #FFD166;
+    --p4Green: #06D6A0;
+    --p4Blue: #118AB2;
+    --p4Navy: #073B4C;
+
+    --p5Navy: #264653;
+    --p5Green: #2A9D8F;
+    --p5Yellow: #E9C46A;
+    --p5LOrange: #F4A261;
+    --p5DOrange: #E76F51;
+   
+   --p0Black: #0B090A;
+}
+
+
+html, body {
+    font-family: sans-serif;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--p0Black);
+}
+
+h1 {
+    color: var(--p3Orange);
+    text-align: center;
+    font-family: 'Dancing Script Reg';
+    font-size: 125px;
+    margin: 15px 0;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    margin-bottom: 50px;
+    background-image: linear-gradient(to right, transparent, var(--p3Orange), transparent);  
+      
+}
+
+header {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* #navbarHeader {
+   background-color: var(--p0Black);
+} */
+
+nav {
+    height: 70px;
+    width: 70vw;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+a {
+    line-height: 200%;
+    position: relative;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: var(--p3Orange);
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    padding: 0 80px;
+}
+
+a:before,
+a:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background-color: var(--p3Orange);
+    transition: 0.5s;
+}
+
+a:after {
+    left: 0;
+    bottom: -10px;
+}
+
+a:before {
+    right: 0;
+    top: -10px;
+}
+
+a:hover {
+    color: #FFFFFF;
+}
+
+a:hover:after,
+a:hover:before {
+    width: 100%;
+}
+
+.row {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 0 4px;
+}
+
+.column {
+   flex: 25%;
+   max-width: 25%;
+   padding: 0 4px;
+}
+
+.column img {
+   margin-top: 8px;
+   vertical-align: middle;
+   width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+   .column {
+      flex: 50%;
+      max-width: 50%;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .column {
+      flex: 100%;
+      max-width: 100%;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* .container {
+   
+    width: inherit;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+#navbarHeader {
+    text-align: center;
+    background: var(--p5Green);
+}
+
+nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   margin: auto;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 20px 80px;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+   position: relative;
+}
+
+nav ul li a:before, nav ul li a:after {
+   content: "";
+   position: absolute;
+   height: 3px;
+   width: 100%;
+   background-colour: #18f08b;
+   transition: 0.5s;
+}
+
+nav a:hover {
+    color: #FFFFFF;
+}
+
+*,*:before , *:after {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+} */
+
+  
+/* h1 {
+font-family: 'Dancing Script Reg';
+font-size: 60px;
+}
+
+p {
+max-width: 65%;
+min-width: 500px;
+}
+
+h2 {
+text-align: center;
+font-size: 2.6rem;
+} */
+/* 
+div {
+padding-right: 30px;
+height: 100%;
+width: 100%;
+} */
+
+/* .container {
+display: flex;
+} */
+
+
+/* 
+.main {
+padding-left: 30px;
+min-width: 75%;
+} */
+
+
+/* .nav h1 {
+padding-left: 20px;
+} */
+
+  
+  
+  
+  
