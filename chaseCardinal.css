@@ -131,7 +131,7 @@ a {
     color: var(--p3Pink);
     font-size: 22px;
     letter-spacing: 0.5px;
-    padding: 0 8%;
+    padding: 0 20%;
 }
 
 a:before,
@@ -195,7 +195,7 @@ a:hover:before {
 */
 @media screen and (max-width: 850px) {
    a {
-      padding: 0 20%;
+      padding: 0 6%;
    }
 }
 /*
