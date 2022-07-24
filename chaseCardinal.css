@@ -230,6 +230,6 @@ a:hover:before {
 
 @media screen and (min-width: 400px) {
    a {
-      padding: 0 60px;
+      padding: 0 20px;
    }
 }
